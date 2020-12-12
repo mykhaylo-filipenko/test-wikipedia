@@ -35,6 +35,7 @@ public class DefaultMenu extends BasePage {
     }
 
     public void enterSearchField(String input) {
+        waitForCondition(this::isSearchBarDisplayed);
         driver.findElementById(SEARCH_FILED).sendKeys(input);
     }
 
@@ -44,6 +45,11 @@ public class DefaultMenu extends BasePage {
 
     public Boolean isArticleDisplayed() {
         return driver.findElementsById(ARTICLE_TITLE)
+                .size() > 0;
+    }
+
+    public Boolean isSearchBarDisplayed() {
+        return driver.findElementsById(SEARCH_FILED)
                 .size() > 0;
     }
 

@@ -21,5 +21,7 @@ public class firstTest {
         defaultMenu.clickOnFirstArticleOnDropdown();
         defaultMenu.waitForArticle();
         defaultMenu.verifyArticleIsDisplayed(inputField);
+
+        androidDriver.quit();
     }
 }

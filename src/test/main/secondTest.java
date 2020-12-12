@@ -26,5 +26,7 @@ public class secondTest {
         defaultMenu.clickOnArticleOnMyListsByIndex(1);
         defaultMenu.clickOnRemoveItemFromReadingList();
         defaultMenu.verifyAllItemWasRemovedFromList();
+
+        androidDriver.quit();
     }
 }
